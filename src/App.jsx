@@ -1,7 +1,8 @@
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import informacion from "./components/ItemDetail/informacion";
+
+import Contact from "./Pestañas/SobreNosotros.jsx"
 // 1. Importamos los componentes de react-router-dom
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -19,18 +20,14 @@ function App() {
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/Contacto" element={<ItemListContainer />} />
-          {/* 5. Definimos un segmento para nuestra URL de detalle */}
-          <Route
-            path="/compra/:itemID"
-            element={<ItemDetailContainer />}
-          ></Route>
+          <Route path="/compra/:itemID"element={<ItemDetailContainer />}></Route>
+          <Route path="/SobreNosotros" element={< Contact/>} />
+
+          <Route path="*" element={<h1>error 404 pagina no encontrada</h1>} />c
          
         </Routes>
         <Routes>
-        <Route
-            path="/Descripcion/"
-            element={<informacion/>}
-          ></Route>
+
                </Routes>
        
       </BrowserRouter>

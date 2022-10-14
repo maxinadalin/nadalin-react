@@ -18,6 +18,7 @@ const data = [
     expired: true,
     detail: "Obten tu amigurumi de C 3po!!",
     stock: 10,
+    descripcion: "cosa que se maneja sola y esta re sacada mal mal",
     category: "Amigurumi",
   },
   {

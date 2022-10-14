@@ -3,6 +3,7 @@ import Button from "../Button/Button";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import "./card.css";
+import DescripcionContainer from "../../Pestañas/descripcion/DescripcionContainer";
 
 export default function Card(props) {
   const [expired, setExpired] = useState(props.expired);
@@ -35,7 +36,7 @@ export default function Card(props) {
   return (
     <div onClick={handleCardClick} className="card" style={cardStyles}>
       <div className="card-img">
-      <Link to={`/Descripcion`}>
+      <Link to={`/Descripcion/${<DescripcionContainer/>}`}>
         <img style={imgStyle} src={props.img} alt={props.title}></img>
         </Link>
       </div>
